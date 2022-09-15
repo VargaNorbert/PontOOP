@@ -33,11 +33,23 @@ public class Pont {
         return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
     }
 
-    public double getKetPontTavolsaga(Pont a,Pont b)
-    {
-        int egyik=a.x-b.x;
-        int masik=a.y-b.y;
+    public double getKetPontTavolsaga(Pont a) {
+        int egyik = a.x - this.x;
+        int masik = a.y - this.y;
 
         return Math.sqrt(Math.pow(egyik, 2) + Math.pow(masik, 2));
+    }
+
+    public int holTalalhato() {
+        if (this.x < 0 && this.y < 1) {
+            return 2;
+        } else if (this.x < 0 && this.y > 0) {
+            return 1;
+        } else if (this.x > 0 && this.y < 0) {
+            return 3;
+        } else {
+            return 4;
+        }
+
     }
 }
