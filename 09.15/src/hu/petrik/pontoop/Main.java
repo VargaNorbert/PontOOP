@@ -36,5 +36,7 @@ public class Main {
 
         System.out.println(p1.getKetPontTavolsaga(p2));
 
+        System.out.println(p3.holTalalhato());
+
     }
 }
