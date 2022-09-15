@@ -32,4 +32,12 @@ public class Pont {
     public double getOrigotolMertTavolsag() {
         return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
     }
+
+    public double getKetPontTavolsaga(Pont a,Pont b)
+    {
+        int egyik=a.x-b.x;
+        int masik=a.y-b.y;
+
+        return Math.sqrt(Math.pow(egyik, 2) + Math.pow(masik, 2));
+    }
 }
