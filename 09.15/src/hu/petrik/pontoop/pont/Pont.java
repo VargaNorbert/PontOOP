@@ -5,18 +5,27 @@ public class Pont {
     private int y;
 
     public Pont() {
-        x=0;
-        y=0;
+        x = 0;
+        y = 0;
     }
 
-    public Pont(int x,int y){
-        this.x=x;
-        this.y=y;
+    public Pont(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
     @Override
     public String toString() {
         //return "{" + x +", "+ y + '}';
-        return String.format("(%d, %d)",this.x,this.y);
+        return String.format("(%d, %d)", this.x, this.y);
+    }
+
+    public Pont(int n) {
+        this.x = koordinataGeneralasa(n);
+        this.y = koordinataGeneralasa(n);
+    }
+
+    private int koordinataGeneralasa(int n) {
+        return (int) (Math.random() * (2 * n) + 1) - n;
     }
 }
